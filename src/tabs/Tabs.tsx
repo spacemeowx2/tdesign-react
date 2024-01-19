@@ -14,7 +14,7 @@ export interface TabsProps extends TdTabsProps, StyledProps {
 }
 
 const Tabs = forwardRefWithStatics(
-  (props: TabsProps, ref) => {
+  (props: TabsProps, ref: React.Ref<HTMLDivElement>) => {
     const { children, list, placement, onRemove, value: tabValue, onChange, className, style } = props;
     let { defaultValue } = props;
 

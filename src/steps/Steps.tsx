@@ -14,7 +14,7 @@ export interface StepsProps extends TdStepsProps, StyledProps {
 }
 
 const Steps = forwardRefWithStatics(
-  (props: StepsProps, ref) => {
+  (props: StepsProps, ref: React.Ref<HTMLDivElement>) => {
     const { style, readonly, layout, theme, sequence, separator, children, options } = props;
     const { classPrefix } = useConfig();
 

@@ -19,7 +19,7 @@ export interface FormProps extends TdFormProps, StyledProps {
 }
 
 const Form = forwardRefWithStatics(
-  (originalProps: FormProps, ref) => {
+  (originalProps: FormProps, ref: React.Ref<ReturnType<typeof useInstance>>) => {
     const { classPrefix, form: globalFormConfig } = useConfig();
     const props = useDefaultProps<FormProps>(originalProps, formDefaultProps);
     const {
